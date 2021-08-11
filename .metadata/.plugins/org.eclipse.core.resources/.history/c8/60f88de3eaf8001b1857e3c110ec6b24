@@ -1,0 +1,33 @@
+package practice;
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class Student {
+	private String name;
+	private int[] scores;
+	private static int idx;
+	public Student(String name){
+		this.name = name;
+		scores = new int[4];
+		idx = 0;
+	}
+
+	public void add(int score)
+	{
+		scores[idx++] = score;	
+	}
+
+	public String getName() {
+		return name;
+	}
+
+	public int[] getScores() {
+		return scores;
+	}
+
+	public static int getIdx() {
+		return idx;
+	}
+	
+}

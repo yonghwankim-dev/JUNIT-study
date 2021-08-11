@@ -1,0 +1,8 @@
+package practice;
+
+public class StudentScoreCalculator {
+	public int getStduentAverage(Student student)
+	{
+		return 0;
+	}
+}

@@ -1,0 +1,29 @@
+package practice;
+
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
+import java.util.stream.Collectors;
+
+import iloveyouboss.Scoreable;
+
+public class StudentScoreCalculator {
+	private List<Student> students = new ArrayList<Student>();
+	
+	public void add(Student student)
+	{
+		students.add(student);
+	}
+	
+	public int getStduentAverage(Student student)
+	{
+		// int[] to List<Integer> 전환
+		List<Integer> scores = Arrays.stream(student.getScores())
+										.boxed()
+											.collect(Collectors.toList());
+		
+		// List<Integer>의 합계
+		int total = scores.stream().reduce(0, Integer::sum);
+		return total / scores.size();
+	}
+}

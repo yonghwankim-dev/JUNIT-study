@@ -1,0 +1,11 @@
+package practice;
+
+import java.util.Arrays;
+
+public class StudentScoreCalculator {
+	public int getStduentAverage(Student student)
+	{
+		int total = Arrays.asList(student.getScores()).stream().reduce(0, Integer::sum);
+		return total / student.getScores().size();
+	}
+}

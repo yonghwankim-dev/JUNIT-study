@@ -1,0 +1,13 @@
+package iloveyouboss_01.iloveyouboss;
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class ScoreCollection {
+	private List<Scoreable> scores = new ArrayList<Scoreable>();
+	
+	public void add(Scoreable scoreable)
+	{
+		scores.add(scoreable);
+	}
+}

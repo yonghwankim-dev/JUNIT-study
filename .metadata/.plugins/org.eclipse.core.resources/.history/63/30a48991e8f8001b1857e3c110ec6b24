@@ -1,0 +1,9 @@
+package practice;
+
+public class StudentScoreCalculator {
+	public int getStduentAverage(Student student)
+	{
+		student.getScores().stream().reduce(0,Integer::sum);
+		return 0;
+	}
+}

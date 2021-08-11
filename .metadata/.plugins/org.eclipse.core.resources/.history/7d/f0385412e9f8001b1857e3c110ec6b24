@@ -1,0 +1,20 @@
+package practice;
+
+import static org.junit.Assert.*;
+
+import org.junit.Test;
+
+public class StudentScoreCalculatorTest {
+
+	@Test
+	public void answerArithmeticMeanOfForNumbers() {
+		StudentScoreCalculator cal = new StudentScoreCalculator();
+		Student student = new Student("kim");
+		student.add(100);
+		student.add(100);
+		student.add(100);
+		student.add(100);
+		cal.getStduentAverage(student);
+	}
+
+}

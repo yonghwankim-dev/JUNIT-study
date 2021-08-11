@@ -1,0 +1,17 @@
+package iloveyouboss;
+
+import static org.junit.Assert.*;
+
+import org.junit.Test;
+
+public class ScoreCollectionTest {
+
+	@Test
+	public void answerArithmeticMeanOfTowNumbers() {
+		// 준비
+		ScoreCollection collection = new ScoreCollection();
+		collection.add(()->5);
+		
+	}
+
+}

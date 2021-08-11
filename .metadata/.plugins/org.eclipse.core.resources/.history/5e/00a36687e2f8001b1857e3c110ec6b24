@@ -1,0 +1,6 @@
+package iloveyouboss_01.iloveyouboss;
+
+@FunctionalInterface
+public interface Scoreable {
+	int getScore();
+}
