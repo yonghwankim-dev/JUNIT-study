@@ -47,7 +47,7 @@ public class Profile {
       for (Criterion criterion: criteria) {
     	 // Answer 객체는 Question 객체를 참조하고 그 대답에 대한 적절한 값을 포합합니다.
          Answer answer = answers.get(
-               criterion.getAnswer().getQuestionText()); 
+               criterion.getAnswer().getQuestionText());
          boolean match = 
                criterion.getWeight() == Weight.DontCare || 
                answer.match(criterion.getAnswer());

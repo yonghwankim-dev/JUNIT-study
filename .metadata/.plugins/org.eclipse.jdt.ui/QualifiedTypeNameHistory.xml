@@ -10,4 +10,15 @@
 <fullyQualifiedTypeName name="practice.Student"/>
 <fullyQualifiedTypeName name="java.lang.ArrayStoreException"/>
 <fullyQualifiedTypeName name="java.util.Arrays"/>
+<fullyQualifiedTypeName name="iloveyouboss.Profile"/>
+<fullyQualifiedTypeName name="iloveyouboss.Question"/>
+<fullyQualifiedTypeName name="iloveyouboss.Criterion"/>
+<fullyQualifiedTypeName name="iloveyouboss.Bool"/>
+<fullyQualifiedTypeName name="iloveyouboss.Weight"/>
+<fullyQualifiedTypeName name="iloveyouboss.Answer"/>
+<fullyQualifiedTypeName name="org.junit.Before"/>
+<fullyQualifiedTypeName name="iloveyouboss.BooleanQuestion"/>
+<fullyQualifiedTypeName name="iloveyouboss.ProfileTest"/>
+<fullyQualifiedTypeName name="iloveyouboss.Criteria"/>
+<fullyQualifiedTypeName name="java.lang.NullPointerException"/>
 </qualifiedTypeNameHistroy>
