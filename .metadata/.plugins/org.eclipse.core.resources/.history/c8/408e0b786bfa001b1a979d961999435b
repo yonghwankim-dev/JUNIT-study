@@ -19,7 +19,6 @@ public class ProfileTest {
 	private BooleanQuestion question;
 	private Criteria criteria;
 	
-	// @Befroe 애노테이션 적용
 	// @Test 애노테이션이 설정된 테스트 메서드들의 공통된 로직
 	@Before
 	public void create() {
@@ -29,7 +28,7 @@ public class ProfileTest {
 		criteria = new Criteria();
 	}
 	
-//	테스트 코드 1, @Before 애노테이션 적용 및 지역변수 인라인 적용 after
+//	테스트 코드 1, Before 애노테이션 적용 및 지역변수 인라인 적용 after
 	@Test
 	public void matchAnswersFalseWhenMustMatchCriteriaNotMet() {
 		profile.add(new Answer(question, Bool.FALSE));
@@ -40,23 +39,8 @@ public class ProfileTest {
 		
 		assertFalse(matches);
 	}
-	
-//	테스트 코드 2, @Before 애노테이션 적용 및 지역변수 인라인 적용 after
-	@Test
-	public void matchAnswersTrueForAnyDontCareCriteria() {
-		// 준비
-		profile.add(new Answer(question, Bool.FALSE));	
-		criteria.add(new Criterion(new Answer(question, Bool.TRUE), Weight.DontCare));	
-		
-		// 실행
-		boolean matches = profile.matches(criteria);
-		
-		// 단언
-		assertTrue(matches);	
-	}
-	
-	
-//	테스트 코드 1, @Before 애노테이션 적용 및 지역변수 인라인 적용 before
+
+//	테스트 코드 1, Before 애노테이션 적용 및 지역변수 인라인 적용 before
 //	@Test
 //	public void matchAnswersFalseWhenMustMatchCriteriaNotMet() {
 //		Profile profile = new Profile("Bull Hockey, Inc.");
@@ -74,20 +58,13 @@ public class ProfileTest {
 //		
 //		assertFalse(matches);
 //	}
+
 	
-//	테스트 코드 2, @Before 애노테이션 적용 및 지역변수 인라인 적용 before
 //	@Test
 //	public void matchAnswersTrueForAnyDontCareCriteria() {
 //		// 준비
-//		Profile profile = new Profile("Bull Hockey, Inc.");
-//		Question question = new BooleanQuestion(1, "Got milk?");
-//		Criteria criteria = new Criteria();
-//		Answer profileAnswer = new Answer(question, Bool.FALSE);
-//		
-//		profile.add(profileAnswer);	
-//		Answer criteriaAnswer = new Answer(question, Bool.TRUE);
-//		Criterion criterion = new Criterion(criteriaAnswer, Weight.DontCare);
-//		criteria.add(criterion);	
+//		profile.add(new Answer(question, Bool.FALSE));	
+//		criteria.add(new Criterion(new Answer(question, Bool.TRUE), Weight.DontCare));	
 //		
 //		// 실행
 //		boolean matches = profile.matches(criteria);
@@ -95,4 +72,25 @@ public class ProfileTest {
 //		// 단언
 //		assertTrue(matches);	
 //	}
+	
+//	테스트 코드 2, Before 애노테이션 적용 및 지역변수 인라인 적용 before
+	@Test
+	public void matchAnswersTrueForAnyDontCareCriteria() {
+		// 준비
+		Profile profile = new Profile("Bull Hockey, Inc.");
+		Question question = new BooleanQuestion(1, "Got milk?");
+		Criteria criteria = new Criteria();
+		Answer profileAnswer = new Answer(question, Bool.FALSE);
+		
+		profile.add(profileAnswer);	
+		Answer criteriaAnswer = new Answer(question, Bool.TRUE);
+		Criterion criterion = new Criterion(criteriaAnswer, Weight.DontCare);
+		criteria.add(criterion);	
+		
+		// 실행
+		boolean matches = profile.matches(criteria);
+		
+		// 단언
+		assertTrue(matches);	
+	}
 }
